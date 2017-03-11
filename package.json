@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "JavaScript development environment Pluralsight course by Cory House",
   "scripts": {
+    "prestart": "node buildscripts/startMessage.js",
+    "start": "npm-run-all --parallel security-check open:src",
+    "open:src": "node buildscripts/srcService.js",
+    "security-check": "nsp check"
   },
   "author": "Zsolt Szlavik",
   "license": "MIT",
